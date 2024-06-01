@@ -29,12 +29,11 @@ function App() {
   };
 
   const addDiscussion = async () => {
-    const response = await fetch("http://localhost:5000/api/create", {
-      method: "POST",
-      headers: {},
-      body: JSON.stringify({}),
-    });
-    
+    // const response = await fetch("http://localhost:5000/api/create", {
+    //   method: "POST",
+    //   headers: {},
+    //   body: JSON.stringify({}),
+    // });
 
     const newDiscussion = {
       id: nextDiscussionId,
