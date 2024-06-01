@@ -14,7 +14,7 @@ function ChatInput({ addMessage }) {
   };
 
   return (
-    <form className="chat-input" onSubmit={handleSubmit}>
+    <form className="chat-input gap-4 px-5" onSubmit={handleSubmit}>
       <input
         type="text"
         value={inputValue}

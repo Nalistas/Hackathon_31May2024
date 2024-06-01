@@ -9,7 +9,7 @@ function DiscussionList({ discussions, setCurrentDiscussionId, addDiscussion }) 
       {discussions.map(discussion => (
         <div
           key={discussion.id}
-          className="discussion-item"
+          className="p-2 cursor-pointer border-b-4 hover:bg-white"
           onClick={() => setCurrentDiscussionId(discussion.id)}
         >
           {discussion.title}
