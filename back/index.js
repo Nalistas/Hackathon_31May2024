@@ -28,14 +28,22 @@ const OpenAIService = {
 app.use(cors())
 app.use(bodyParser.json());
 
+app.post("/api/create", (req, res) => {
+    
+});
+
 app.get("/api/data", (req, res) => {
     res.json({ message: "Hello from server!" });
 });
 
-app.post("/api/data", (req, res) => {
-    const { message } = req.body;
-    console.log("message", message);
-    res.json({ message: "Hello from server!" });
+app.post("/api/data", async (req, res) => {
+    try {
+        const responseText = await OpenAIService.getGPT3Response(req.body.message);
+        res.json({ text: responseText });
+    } catch (error) {
+        console.error(error.response ? error.response.data : error.message);
+        res.status(500).send('Une erreur est survenue');
+    }
 });
 
 app.use(express.json());

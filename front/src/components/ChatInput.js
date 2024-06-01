@@ -28,7 +28,7 @@ function ChatInput({ addMessage }) {
         console.log(data);
 
         // Combine user message and server response in a single call to addMessage
-        addMessage(userMessage, data.message);
+        addMessage(userMessage, data.text);
       } catch (error) {
         console.error('Error:', error);
         setError('Failed to send message to the server');
