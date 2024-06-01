@@ -1,10 +1,12 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
 
 dotenv.config();
 const app = express();
-const port = 3000;
+const port = 5000;
 
 const OpenAIService = {
     getGPT3Response: async (userPrompt) => {
@@ -22,6 +24,19 @@ const OpenAIService = {
         return response.data.choices[0].text;
     }
 };
+
+app.use(cors())
+app.use(bodyParser.json());
+
+app.get("/api/data", (req, res) => {
+    res.json({ message: "Hello from server!" });
+});
+
+app.post("/api/data", (req, res) => {
+    const { message } = req.body;
+    console.log("message", message);
+    res.json({ message: "Hello from server!" });
+});
 
 app.use(express.json());
 
