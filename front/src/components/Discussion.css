@@ -1,15 +1,4 @@
 /* src/components/Discussion.css */
-.discussion {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.message-list {
-    flex: 1;
-    overflow-y: auto;
-}
-
 .chat-input {
     display: flex;
     padding: 10px;

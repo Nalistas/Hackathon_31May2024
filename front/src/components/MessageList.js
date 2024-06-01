@@ -5,7 +5,7 @@ import './MessageList.css';
 
 function MessageList({ messages }) {
   return (
-    <div className="message-list">
+    <div className="flex-1 overflow-y-auto">
       {messages.map((message) => (
         <Message key={message.id} text={message.text} sender={message.sender} />
       ))}
