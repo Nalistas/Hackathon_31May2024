@@ -11,74 +11,25 @@
   background-color: #282c34;
   padding: 20px;
   color: white;
-}
-
-.message-list {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-}
-
-.message {
-  background-color: #f1f1f1;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
   text-align: left;
 }
 
-.chat-input {
+.main-content {
   display: flex;
-  padding: 10px;
-  background-color: #282c34;
-}
-
-.chat-input input {
   flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
 }
 
-.chat-input button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #61dafb;
-  color: white;
-  cursor: pointer;
+.discussion-list {
+  width: 300px;
+  border-right: 1px solid #ccc;
+  background-color: #f9f9f9;
 }
 
-.chat-input button:hover {
-  background-color: #21a1f1;
-}
-/* src/App.css */
-.App {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.App-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
-}
-
-.message-list {
+.discussion {
   flex: 1;
   padding: 10px;
   overflow-y: auto;
-}
-
-.message {
-  background-color: #f1f1f1;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: left;
+  background-color: #f9f9f9;
 }
 
 .chat-input {

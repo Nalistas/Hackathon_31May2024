@@ -1,0 +1,35 @@
+/* src/components/DiscussionList.css */
+.discussion-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.discussion-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.discussion-item:hover {
+    background-color: #f1f1f1;
+}
+
+.new-discussion {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.new-discussion button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #61dafb;
+    color: white;
+    cursor: pointer;
+}
+
+.new-discussion button:hover {
+    background-color: #21a1f1;
+}
