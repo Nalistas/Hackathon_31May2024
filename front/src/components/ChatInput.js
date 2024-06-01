@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ChatInput.css';
 
-function ChatInput({ addMessage }) {
+function ChatInput({ addMessage, discussionTitle }) {
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState('');
 
@@ -17,7 +17,7 @@ function ChatInput({ addMessage }) {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ message: userMessage }),
+          body: JSON.stringify({ message: userMessage, title: discussionTitle }),
         });
 
         if (!response.ok) {

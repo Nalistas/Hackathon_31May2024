@@ -9,7 +9,7 @@ function Discussion({ discussion, addMessage }) {
     <div className="flex flex-col h-full w-full">
       <h2>{discussion.title}</h2>
       <MessageList messages={discussion.messages} />
-      <ChatInput addMessage={addMessage} />
+      <ChatInput addMessage={addMessage} discussionTitle={discussion.title} />
     </div>
   );
 }

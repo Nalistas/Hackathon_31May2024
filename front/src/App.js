@@ -8,7 +8,6 @@ import './App.css';
 function App() {
   const [discussions, setDiscussions] = useState([
     { id: 1, title: "Lesson 1", messages: [{ id: 1, text: "Hello! How can I help you today?", sender: "bot" }] },
-    { id: 2, title: "Lesson 2", messages: [{ id: 1, text: "We appreciate your feedback!", sender: "bot" }] },
   ]);
   const [currentDiscussionId, setCurrentDiscussionId] = useState(discussions[0].id);
   const [nextDiscussionId, setNextDiscussionId] = useState(discussions.length + 1);
@@ -28,9 +27,15 @@ function App() {
       return discussion;
     }));
   };
-  
 
-  const addDiscussion = () => {
+  const addDiscussion = async () => {
+    const response = await fetch("http://localhost:5000/api/create", {
+      method: "POST",
+      headers: {},
+      body: JSON.stringify({}),
+    });
+    
+
     const newDiscussion = {
       id: nextDiscussionId,
       title: `Lesson ${nextDiscussionId}`,
